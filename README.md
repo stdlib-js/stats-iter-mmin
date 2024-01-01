@@ -43,30 +43,14 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/stats-iter-mmin
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var itermmin = require( '@stdlib/stats-iter-mmin' );
+import itermmin from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-iter-mmin@esm/index.mjs';
 ```
 
 #### itermmin( iterator, W )
@@ -74,7 +58,7 @@ var itermmin = require( '@stdlib/stats-iter-mmin' );
 Returns an [iterator][mdn-iterator-protocol] which iteratively computes a moving minimum value. The `W` parameter defines the number of iterated values over which to compute the moving minimum.
 
 ```javascript
-var array2iterator = require( '@stdlib/array-to-iterator' );
+import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@esm/index.mjs';
 
 var arr = array2iterator( [ 2.0, 1.0, 3.0, -7.0, -5.0 ] );
 var it = itermmin( arr, 3 );
@@ -122,9 +106,14 @@ m = it.next().value; // [3.0, -7.0, -5.0]
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var runif = require( '@stdlib/random-iter-uniform' );
-var itermmin = require( '@stdlib/stats-iter-mmin' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import runif from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-uniform@esm/index.mjs';
+import itermmin from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-iter-mmin@esm/index.mjs';
 
 // Create an iterator for generating uniformly distributed pseudorandom numbers:
 var rand = runif( -10.0, 10.0, {
@@ -146,6 +135,10 @@ while ( true ) {
         console.log( 'min: %d', v.value );
     }
 }
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -186,7 +179,7 @@ while ( true ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -250,13 +243,13 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/stats/iter/min]: https://github.com/stdlib-js/stats-iter-min
+[@stdlib/stats/iter/min]: https://github.com/stdlib-js/stats-iter-min/tree/esm
 
-[@stdlib/stats/iter/mmax]: https://github.com/stdlib-js/stats-iter-mmax
+[@stdlib/stats/iter/mmax]: https://github.com/stdlib-js/stats-iter-mmax/tree/esm
 
-[@stdlib/stats/iter/mmidrange]: https://github.com/stdlib-js/stats-iter-mmidrange
+[@stdlib/stats/iter/mmidrange]: https://github.com/stdlib-js/stats-iter-mmidrange/tree/esm
 
-[@stdlib/stats/iter/mrange]: https://github.com/stdlib-js/stats-iter-mrange
+[@stdlib/stats/iter/mrange]: https://github.com/stdlib-js/stats-iter-mrange/tree/esm
 
 <!-- </related-links> -->
 
